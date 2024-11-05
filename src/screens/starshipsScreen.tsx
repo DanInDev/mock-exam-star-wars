@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { getStarships } from '../services/starshipsService';
-import StarHeader from '../components/starHeader';
-import StarText from '../components/starText';
+import StarHeader from '../components/star_components/starHeader';
+import StarText from '../components/star_components/starText';
 import colors from '../constants/colors';
 
 interface Starship {
@@ -43,6 +43,7 @@ const StarshipsScreen: React.FC = () => {
     <View style={styles.container}>
       <StarHeader/>
       <StarText style={styles.title}>Available Starships</StarText>
+      {/* FlatList of Starships */}
       <FlatList
         data={starships}
         keyExtractor={(starship) => starship.name}
@@ -56,6 +57,7 @@ const StarshipsScreen: React.FC = () => {
           </View>
         )}
       />
+      {/* Possible Tab Navigator */}
     </View>
   );
 };

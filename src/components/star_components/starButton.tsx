@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 interface StarButtonProps {
   title: string;

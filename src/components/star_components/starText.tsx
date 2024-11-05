@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, TextProps } from 'react-native';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 interface StarTextProps extends TextProps {
   children: React.ReactNode;

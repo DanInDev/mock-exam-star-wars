@@ -3,7 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import StarText from './starText';
 import StarButton from './starButton';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 const StarHeader: React.FC = () => {
   const navigation = useNavigation();
@@ -11,11 +11,11 @@ const StarHeader: React.FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        <Image source={require('../../assets/empire_icon.png')} style={styles.icon} />
+        <Image source={require('../../../assets/empire_icon.png')} style={styles.icon} />
         <StarText style={styles.title}>Galaxy Navigator</StarText>
-        <Image source={require('../../assets/empire_icon.png')} style={styles.icon} />
+        <Image source={require('../../../assets/empire_icon.png')} style={styles.icon} />
       </View>
-      <Image source={require('../../assets/lightsaber.png')} style={styles.divider} />
+      <Image source={require('../../../assets/lightsaber.png')} style={styles.divider} />
     </View>
   );
 };

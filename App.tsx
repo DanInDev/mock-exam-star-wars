@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as Font from 'expo-font';
-import LoadingScreen from './src/components/loadingScreen';
+import LoadingScreen from './src/components/star_components/loadingScreen';
 import SplashScreen from './src/screens/splashPage';
 import StarshipsScreen from './src/screens/starshipsScreen';
 
