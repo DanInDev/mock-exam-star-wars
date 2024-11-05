@@ -8,7 +8,7 @@ import colors from '../constants/colors';
 
 interface Starship {
   name: string;
-  model: string;
+  starship_class: string;
 }
 
 const StarshipsScreen: React.FC = () => {
@@ -51,7 +51,7 @@ const StarshipsScreen: React.FC = () => {
             <Image source={require('../../assets/x-wing.png')} style={styles.starshipIcon} />
             <View style={styles.textContainer}>
               <Text style={styles.itemName}>{item.name}</Text>
-              <Text style={styles.itemModel}>{item.model}</Text>
+              <Text style={styles.itemClass}>{item.starship_class}</Text>
             </View>
           </View>
         )}
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: colors.mainText,
   },
-  itemModel: {
+  itemClass: {
     fontSize: 20,
     color: colors.secondaryText,  
   },
