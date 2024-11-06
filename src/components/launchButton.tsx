@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 import StarText from "./star_components/starText";
 import colors from "../constants/colors";
 
+/* This should be removed for the example */
 interface LaunchButtonProps {
   starshipName: string;
   onLaunch?: () => void;
@@ -15,16 +16,10 @@ const LaunchButton: React.FC<LaunchButtonProps> = ({
   const [launched, setLaunched] = useState(false);
 
   const handleLaunchPress = () => {
-    if (!launched) {
-      onLaunch && onLaunch();
-      sendLaunchNotification(
-        "Starship Launched!",
-        `The ${starshipName} has been successfully launched!`
-      );
-      setLaunched(true);
-    }
+    setLaunched(true);
+    onLaunch?.();
+    console.log(`Starship ${starshipName} launched!`);
   };
-
   return (
     <TouchableOpacity onPress={handleLaunchPress} style={styles.launchButton}>
       <StarText>{launched ? "Launched" : "Ready"}</StarText>
@@ -43,6 +38,3 @@ const styles = StyleSheet.create({
 
 export default LaunchButton;
 
-function sendLaunchNotification(arg0: string, arg1: string) {
-    throw new Error("Function not implemented.");
-}

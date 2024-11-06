@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import * as Font from 'expo-font';
 import LoadingScreen from './src/components/star_components/loadingScreen';
-import SplashScreen from './src/screens/splashPage';
-import StarshipsScreen from './src/screens/starshipsScreen';
+import StackNavigator from './src/navigation/stackNavigator';
 
-const Stack = createStackNavigator();
 
 const App: React.FC = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
@@ -29,10 +26,7 @@ const App: React.FC = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashPage">
-        <Stack.Screen name="SplashScreen" component={SplashScreen} options={{headerShown: false}} />
-        <Stack.Screen name="StarshipsScreen" component={StarshipsScreen} options={{headerShown:false}} />
-      </Stack.Navigator>
+    <StackNavigator/>
     </NavigationContainer>
   );
 };

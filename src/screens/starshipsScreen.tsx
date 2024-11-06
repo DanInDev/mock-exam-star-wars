@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, FlatList, ActivityIndicator, StyleSheet, Image } from 'react-native';
+import { View, Text, FlatList, ActivityIndicator, StyleSheet, Image, useWindowDimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { getStarships } from '../services/starshipsService';
 import StarHeader from '../components/star_components/starHeader';
 import StarText from '../components/star_components/starText';
 import colors from '../constants/colors';
-
 import LaunchButton from '../components/launchButton';
 
 interface Starship {
@@ -17,6 +16,8 @@ const StarshipsScreen: React.FC = () => {
   const [starships, setStarships] = useState<Starship[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const navigation = useNavigation();
+  const { width, height } = useWindowDimensions();
+  const isLandscape = width > height;
 
   useEffect(() => {
     const fetchStarships = async () => {
@@ -45,10 +46,10 @@ const StarshipsScreen: React.FC = () => {
     <View style={styles.container}>
       <StarHeader/>
       <StarText style={styles.title}>Available Starships</StarText>
-      {/* FlatList of Starships */}
       <FlatList
         data={starships}
         keyExtractor={(starship) => starship.name}
+        numColumns={isLandscape ? 2 : 1}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
             <Image source={require('../../assets/x-wing.png')} style={styles.starshipIcon} />
@@ -56,12 +57,10 @@ const StarshipsScreen: React.FC = () => {
               <Text style={styles.itemName}>{item.name}</Text>
               <Text style={styles.itemClass}>{item.starship_class}</Text>
             </View>
-            {/* Add LaunchButton for each starship item */}
             <LaunchButton starshipName={item.name} />
           </View>
         )}
       />
-      {/* Possible Tab Navigator */}
     </View>
   );
 };

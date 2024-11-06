@@ -15,16 +15,8 @@
             "./assets/fonts/Starjhol.ttf"
           ]
         }
-      ],
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/empire_icon.png",
-          "color": "#FFD700",
-          "androidMode": "default",
-          "androidCollapsedTitle": "New Starship Notification"
-        }
       ]
+      
     ]
   }
 }
