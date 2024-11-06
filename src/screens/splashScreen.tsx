@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { View, Text, Animated, StyleSheet, ImageBackground, Button } from 'react-native';
+import { View, Animated, StyleSheet, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import StarButton from '../components/star_components/starButton';
 import StarText from '../components/star_components/starText';
 import colors from '../constants/colors';

@@ -5,19 +5,18 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
-    "plugins": [
+
+     "plugins": [
       [
         "expo-font",
         {
           "fonts": [
             "./assets/fonts/Starjedi.ttf",
             "./assets/fonts/Starjhol.ttf"
-        ]
+          ]
         }
       ]
+      
     ]
   }
 }
