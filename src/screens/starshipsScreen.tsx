@@ -6,6 +6,8 @@ import StarHeader from '../components/star_components/starHeader';
 import StarText from '../components/star_components/starText';
 import colors from '../constants/colors';
 
+import LaunchButton from '../components/launchButton';
+
 interface Starship {
   name: string;
   starship_class: string;
@@ -54,6 +56,8 @@ const StarshipsScreen: React.FC = () => {
               <Text style={styles.itemName}>{item.name}</Text>
               <Text style={styles.itemClass}>{item.starship_class}</Text>
             </View>
+            {/* Add LaunchButton for each starship item */}
+            <LaunchButton starshipName={item.name} />
           </View>
         )}
       />
