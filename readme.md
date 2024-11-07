@@ -5,40 +5,6 @@
 
 This project is a React Native application called "Galaxy Navigator". It features a Star Wars-themed interface with custom components and screens.
 
-## File Structure
-Galaxy_Navigator/
-├── assets/
-│   ├── fonts/
-│   │   ├── Starjedi.ttf
-│   │   └── StarJhol.ttf
-│   ├── empire_icon.png
-│   ├── galaxy.jpg
-│   ├── lightsaber.png
-│   └── x-wing.png
-├── src/
-│   ├── components/
-│   │   ├── CustomHeader.tsx
-│   │   ├── LoadingScreen.tsx
-│   │   ├── StarButton.tsx
-│   │   ├── StarHeader.tsx
-│   │   └── StarText.tsx
-│   ├── constants/
-│   │   └── colors.ts
-│   ├── screens/
-│   │   ├── SplashPage.tsx
-│   │   └── StarshipsScreen.tsx
-│   ├── services/
-│   │   └── StarshipsService.ts
-│   └── App.tsx
-├── .gitignore
-├── app.json
-├── babel.config.js
-├── package.json
-├── tsconfig.json
-└── README.md
-
-
-
 ## Components
 
 - **starHeader.tsx**: A custom header component with Star Wars-themed styling.
@@ -75,12 +41,3 @@ Galaxy_Navigator/
 - **galaxy.jpg**: Background image for the splash screen.
 - **lightsaber.png**: Divider image used in the header.
 - **x-wing.png**: Image used in various components.
-
-## Getting Started
-
-To get started with the project, clone the repository and install the dependencies:
-
-```sh
-git clone <repository-url>
-cd Galaxy_Navigator
-npm install
